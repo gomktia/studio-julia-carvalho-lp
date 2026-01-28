@@ -8,7 +8,7 @@ export const courses: Course[] = [
     price: 750,
     duration: '1 dia intensivo',
     category: 'Estética Facial',
-    image: '/assets/limpeza-pele-nova.jpg',
+    image: '/assets/limpeza-pele-profunda.jpeg',
     features: [
       'Protocolo limpeza profunda',
       'Remoção de milium',
@@ -25,7 +25,7 @@ export const courses: Course[] = [
     price: 880,
     duration: '1 dia intensivo',
     category: 'Estética Avançada',
-    image: '/assets/microagulhamento.jpg',
+    image: '/assets/microagulhamento.jpeg',
     features: [
       'Facial, Capilar e Corporal',
       'Indicações e contraindicações',
@@ -42,7 +42,7 @@ export const courses: Course[] = [
     price: 320,
     duration: '1 dia',
     category: 'Sobrancelhas',
-    image: '/assets/brow-lamination.jpg', // Using generic brow image if specific not available
+    image: '/assets/design-sobrancelha.jpeg', // Using generic brow image if specific not available
     features: [
       'Visagismo e medidas',
       'Design com pinça e linha',
@@ -59,7 +59,7 @@ export const courses: Course[] = [
     price: 290,
     duration: '1 dia',
     category: 'Sobrancelhas',
-    image: '/assets/brow-lamination.jpg',
+    image: '/assets/foto-capa-brow.jpeg',
     features: [
       'Técnica de alinhamento',
       'Nutrição dos fios',
@@ -76,7 +76,7 @@ export const courses: Course[] = [
     price: 650,
     duration: '1 dia',
     category: 'Cílios',
-    image: '/assets/lash-lifting.jpg', // Placeholder name, assuming exists or fallback
+    image: '/assets/lash-lifting.jpeg', // Placeholder name, assuming exists or fallback
     features: [
       'Curvatura e coloração',
       'Lash Botox (nutrição)',
@@ -93,7 +93,7 @@ export const courses: Course[] = [
     price: 980,
     duration: '2 dias',
     category: 'Micropigmentação',
-    image: '/assets/labial.jpg',
+    image: '/assets/micropigmentacao-labial.jpeg',
     features: [
       'Neutralização e Revitalização',
       'Efeito Batom e Aquarela',
@@ -110,7 +110,7 @@ export const courses: Course[] = [
     price: 950,
     duration: '2 dias',
     category: 'Micropigmentação',
-    image: '/assets/fio-a-fio.jpg',
+    image: '/assets/micropigmentacao-fio-a-fio.jpeg',
     features: [
       'Trama de fios realista',
       'Profundidade e pressão',
@@ -127,7 +127,7 @@ export const courses: Course[] = [
     price: 970,
     duration: '2 dias',
     category: 'Micropigmentação',
-    image: '/assets/shadow-3d.jpg',
+    image: '/assets/micropigmentacao-shadow.jpeg',
     features: [
       'Efeito pixel e compacta',
       'Degradê perfeito',
@@ -144,7 +144,7 @@ export const courses: Course[] = [
     price: 790,
     duration: '1 dia',
     category: 'Cílios',
-    image: '/assets/cilios.jpg', // Placeholder
+    image: '/assets/cilios.jpeg', // Placeholder
     features: [
       'Fio a fio clássico',
       'Isolamento perfeito',

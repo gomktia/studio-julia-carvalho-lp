@@ -16,28 +16,25 @@ const FAQItem = ({ item, index }: FAQItemProps) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
-      className={`rounded-xl overflow-hidden transition-all duration-300 ${
-        isOpen ? 'bg-surface-elevated border-accent/20' : 'bg-surface border-border'
-      } border`}
+      transition={{ duration: 0.6, delay: index * 0.05, ease: [0.21, 0.45, 0.32, 0.9] }}
+      className={`rounded-[2rem] overflow-hidden transition-all duration-500 ${isOpen ? 'bg-white border-accent shadow-2xl shadow-accent/5' : 'bg-surface border-border/50 hover:border-accent/40'
+        } border`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-5 flex items-center justify-between text-left group"
+        className="w-full px-8 py-6 flex items-center justify-between text-left group"
       >
-        <span className={`font-medium transition-colors pr-4 ${
-          isOpen ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'
-        }`}>
+        <span className={`font-display text-lg tracking-tight transition-colors pr-6 ${isOpen ? 'text-accent' : 'text-text-primary group-hover:text-accent'
+          }`}>
           {item.question}
         </span>
         <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex-shrink-0"
+          animate={{ rotate: isOpen ? 180 : 0, scale: isOpen ? 1.1 : 1 }}
+          transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${isOpen ? 'bg-accent text-white' : 'bg-accent/10 text-accent group-hover:bg-accent group-hover:text-white'
+            }`}
         >
-          <ChevronDown className={`w-5 h-5 transition-colors ${
-            isOpen ? 'text-accent' : 'text-text-tertiary'
-          }`} />
+          <ChevronDown className="w-4 h-4" />
         </motion.div>
       </button>
 
@@ -47,11 +44,11 @@ const FAQItem = ({ item, index }: FAQItemProps) => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 pt-0">
-              <p className="text-body-light text-text-secondary leading-relaxed">
+            <div className="px-8 pb-8 pt-0">
+              <p className="text-text-secondary leading-relaxed font-light italic border-l-2 border-accent/20 pl-6">
                 {item.answer}
               </p>
             </div>

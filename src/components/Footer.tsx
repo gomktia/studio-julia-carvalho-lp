@@ -10,115 +10,122 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-surface border-t border-border">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          {/* Brand */}
-          <div className="md:col-span-5">
-            <div className="mb-6">
-              <span className="font-display text-2xl text-text-primary">
-                Studio <span className="gradient-text italic">Ju Carvalho</span>
+    <footer className="bg-text-primary text-white border-t border-white/5 pt-24 pb-12 overflow-hidden relative">
+      {/* Decorative Brand Background */}
+      <div className="absolute top-0 right-0 p-24 opacity-[0.02] pointer-events-none">
+        <span className="font-display text-[20vw] italic leading-none whitespace-nowrap">Júlia Carvalho</span>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
+
+          {/* Brand & Mission */}
+          <div className="md:col-span-5 space-y-8">
+            <div className="flex flex-col">
+              <span className="font-display text-4xl tracking-tight mb-2">
+                Estudio <span className="text-rose-300 italic">Júlia Carvalho</span>
               </span>
+              <div className="h-0.5 w-12 bg-rose-300/30" />
             </div>
-            <p className="text-body-light text-text-secondary mb-8 max-w-sm">
-              Formação profissional em estética com excelência e certificação reconhecida.
-              Transformando paixão em profissão desde 2014.
+
+            <p className="text-white/60 text-lg font-light leading-relaxed max-w-sm italic">
+              "Excelência técnica e sensibilidade artística para formar os melhores profissionais de estética do mercado."
             </p>
-            <div className="flex gap-3">
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="https://www.instagram.com/studiojucarvalho._/?igsh=MWUyYzh1ajl1OGw4dQ%3D%3D&utm_source=qr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent transition-all"
-              >
-                <Instagram className="w-4 h-4" />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text-secondary hover:text-accent hover:border-accent transition-all"
-              >
-                <Facebook className="w-4 h-4" />
-              </motion.a>
+
+            <div className="flex gap-4">
+              {[
+                { icon: Instagram, href: "https://www.instagram.com/studiojucarvalho._/?igsh=MWUyYzh1ajl1OGw4dQ%3D%3D&utm_source=qr" },
+                { icon: Facebook, href: "#" }
+              ].map((social, i) => (
+                <motion.a
+                  key={i}
+                  whileHover={{ y: -3, backgroundColor: 'rgba(255,255,255,0.1)' }}
+                  href={social.href}
+                  target="_blank"
+                  className="w-12 h-12 rounded-2xl border border-white/10 flex items-center justify-center transition-colors shadow-2xl shadow-black/20"
+                >
+                  <social.icon className="w-5 h-5 text-rose-200" />
+                </motion.a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="md:col-span-3">
-            <h4 className="label-uppercase text-text-tertiary mb-6">Navegação</h4>
-            <ul className="space-y-3">
+            <h4 className="text-[10px] font-bold text-rose-200 uppercase tracking-[0.3em] mb-10">Explorar</h4>
+            <ul className="space-y-4">
               {[
-                { label: 'Cursos', id: 'cursos' },
-                { label: 'Depoimentos', id: 'depoimentos' },
-                { label: 'FAQ', id: 'faq' },
-                { label: 'Inscreva-se', id: 'inscricao' },
+                { label: 'Formação & Cursos', id: 'cursos' },
+                { label: 'Depoimentos Reais', id: 'depoimentos' },
+                { label: 'Suporte & FAQ', id: 'faq' },
+                { label: 'Portal de Inscrição', id: 'inscricao' },
               ].map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-text-secondary hover:text-text-primary transition-colors text-sm flex items-center gap-1 group"
+                    className="text-white/50 hover:text-white transition-all text-sm flex items-center gap-3 group"
                   >
+                    <div className="w-1.5 h-1.5 rounded-full bg-rose-300/20 group-hover:bg-rose-300 transition-colors" />
                     {link.label}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
                   </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact Details */}
           <div className="md:col-span-4">
-            <h4 className="label-uppercase text-text-tertiary mb-6">Contato</h4>
-            <ul className="space-y-4">
+            <h4 className="text-[10px] font-bold text-rose-200 uppercase tracking-[0.3em] mb-10">Atendimento</h4>
+            <ul className="space-y-6">
               <li>
-                <a
-                  href="tel:+5511933300012"
-                  className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm"
-                >
-                  <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-accent" />
+                <a href="tel:+5511933300012" className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-rose-300/30 transition-colors">
+                    <Phone className="w-5 h-5 text-rose-200" />
                   </div>
-                  <span>11 93330-0012</span>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] text-white/40 uppercase font-bold tracking-widest">WhatsApp Business</span>
+                    <span className="text-sm font-medium tracking-wide">11 93330-0012</span>
+                  </div>
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:espacoju101@gmail.com"
-                  className="flex items-center gap-3 text-text-secondary hover:text-text-primary transition-colors text-sm"
-                >
-                  <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-accent" />
+                <a href="mailto:espacoju101@gmail.com" className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-rose-300/30 transition-colors">
+                    <Mail className="w-5 h-5 text-rose-200" />
                   </div>
-                  <span>espacoju101@gmail.com</span>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] text-white/40 uppercase font-bold tracking-widest">E-mail Oficial</span>
+                    <span className="text-sm font-medium tracking-wide">espacoju101@gmail.com</span>
+                  </div>
                 </a>
-              </li>
-              <li className="flex items-center gap-3 text-text-secondary text-sm">
-                <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-accent" />
-                </div>
-                <span>São Paulo, SP</span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="divider my-12" />
+        {/* Footer Bottom */}
+        <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <p className="text-[10px] font-medium text-white/30 uppercase tracking-[0.2em]">
+              © {currentYear} Estudio Júlia Carvalho • Todos os direitos reservados
+            </p>
+            <div className="flex gap-4">
+              <button onClick={() => window.dispatchEvent(new CustomEvent('open-policy', { detail: 'privacy' }))} className="text-[9px] font-bold text-white/20 uppercase tracking-[0.1em] hover:text-rose-300 transition-colors">Política de Privacidade</button>
+              <button onClick={() => window.dispatchEvent(new CustomEvent('open-policy', { detail: 'terms' }))} className="text-[9px] font-bold text-white/20 uppercase tracking-[0.1em] hover:text-rose-300 transition-colors">Termos de Uso</button>
+            </div>
+          </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-text-tertiary">
-            © {currentYear} Studio Ju Carvalho. Todos os direitos reservados.
-          </p>
-          <p className="text-sm text-text-tertiary">
-            Desenvolvido por <span className="text-accent">GOMKT.IA</span>
-          </p>
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-3 grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+              <span className="text-[10px] font-bold text-white uppercase tracking-widest">Desenvolvido por</span>
+              <span className="text-sm font-display italic text-rose-300">Geison Höehr</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+
 
 export default Footer;

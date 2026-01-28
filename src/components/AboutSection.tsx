@@ -26,7 +26,7 @@ const AboutSection = () => {
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl overflow-hidden">
                 <img
                   src="/assets/ju-carvalho.jpg"
-                  alt="Ju Carvalho - Instrutora Studio Ju Carvalho"
+                  alt="Júlia Carvalho - Instrutora Estudio Júlia Carvalho"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -60,7 +60,7 @@ const AboutSection = () => {
             <span className="label-uppercase text-accent mb-4 block">Sobre a Instrutora</span>
 
             <h2 className="heading-xl mb-6">
-              <span className="gradient-text italic">Ju Carvalho</span>
+              <span className="gradient-text italic">Júlia Carvalho</span>
             </h2>
 
             <div className="space-y-4 mb-10">
@@ -71,13 +71,13 @@ const AboutSection = () => {
               </p>
 
               <p className="text-body-light text-text-secondary leading-relaxed">
-                No Studio Ju Carvalho, a missão é formar profissionais técnicas e confiantes, preparadas
+                No Estudio Júlia Carvalho, a missão é formar profissionais técnicas e confiantes, preparadas
                 para entregar resultados excepcionais e construir carreiras de sucesso no mercado de beleza.
               </p>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}

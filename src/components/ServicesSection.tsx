@@ -10,7 +10,22 @@ interface Service {
   price: number;
   duration_minutes: number;
   category: string;
+  image?: string;
 }
+
+const getServiceImage = (name: string) => {
+  const normalized = name.toLowerCase();
+  if (normalized.includes('limpeza de pele')) return '/assets/limpeza-pele-profunda.jpeg';
+  if (normalized.includes('microagulhamento')) return '/assets/microagulhamento.jpeg';
+  if (normalized.includes('design de sobrancelha')) return '/assets/design-sobrancelha.jpeg';
+  if (normalized.includes('brow lamination')) return '/assets/brow-lamination.jpeg';
+  if (normalized.includes('lash lifting')) return '/assets/lash-lifting.jpeg';
+  if (normalized.includes('labial')) return '/assets/micropigmentacao-labial.jpeg';
+  if (normalized.includes('fio a fio')) return '/assets/micropigmentacao-fio-a-fio.jpeg';
+  if (normalized.includes('shadow')) return '/assets/micropigmentacao-shadow.jpeg';
+  if (normalized.includes('cílios') || normalized.includes('cilios')) return '/assets/cilios.jpeg';
+  return '/assets/placeholder.svg';
+};
 
 const ServicesSection = () => {
   const [services, setServices] = useState<Service[]>([]);
@@ -36,6 +51,7 @@ const ServicesSection = () => {
           price: Number(s.price),
           duration_minutes: s.duration_minutes,
           category: s.category || 'Estética',
+          image: getServiceImage(s.name),
         }))
       );
     }
@@ -58,8 +74,7 @@ const ServicesSection = () => {
         >
           <span className="label-uppercase text-accent mb-4 block">Nossos Serviços</span>
           <h2 className="heading-xl mb-6">
-            <span className="text-text-primary">Serviços</span>
-            <br />
+            <span className="text-text-primary">Serviços </span>
             <span className="gradient-text italic">individuais</span>
           </h2>
           <p className="text-body-light text-text-secondary max-w-xl mx-auto">

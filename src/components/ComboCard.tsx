@@ -16,101 +16,136 @@ const ComboCard = ({ combo, index, onContact }: ComboCardProps) => {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group card-elevated overflow-hidden h-full flex flex-col"
+      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.21, 0.45, 0.32, 0.9] }}
+      className="group relative h-full"
     >
-      {/* Header with Campaign Badge */}
-      <div className="relative p-6 bg-gradient-to-br from-accent to-accent/80">
-        {combo.discount && (
-          <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-base/80 backdrop-blur-sm">
-            <span className="text-xs font-medium text-text-primary">{combo.discount}</span>
-          </div>
-        )}
-        <h3 className="font-display text-2xl text-white mb-1">
-          {combo.title}
-        </h3>
-        <p className="text-white/80 text-sm">{combo.campaign}</p>
-      </div>
+      {/* Background Decorative Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/10 rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      {/* Content */}
-      <div className="p-6 flex flex-col flex-1">
-        <p className="text-body-light text-text-secondary text-sm mb-6">
-          {combo.description}
-        </p>
+      <div className="relative h-full flex flex-col bg-white border border-border/50 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500 hover:-translate-y-2 p-2">
+        {/* Content Wrapper with Inner Padding */}
+        <div className="flex flex-col h-full bg-surface rounded-[2rem] border border-border/30 overflow-hidden">
 
-        {/* Services Included */}
-        <div className="mb-6">
-          <div className="flex items-center gap-2 mb-3">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-text-primary">Inclui:</span>
-          </div>
-          <div className="space-y-2">
-            {combo.services.map((service, idx) => (
-              <div key={idx} className="flex items-start justify-between gap-2">
-                <div className="flex items-start gap-2 flex-1">
-                  <div className="w-4 h-4 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-2.5 h-2.5 text-accent" />
-                  </div>
-                  <span className="text-sm text-text-secondary">{service.name}</span>
-                </div>
-                <span className="text-sm text-text-tertiary line-through">
-                  R${service.price}
-                </span>
+          {/* Header Card */}
+          <div className="relative p-8 pb-6 overflow-hidden">
+            {/* Background Blur Circle */}
+            <div className="absolute -top-12 -right-12 w-32 h-32 bg-accent/10 rounded-full blur-3xl group-hover:bg-accent/20 transition-colors" />
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-4">
+                {combo.discount && (
+                  <span className="px-3 py-1 rounded-full bg-accent text-white text-[10px] font-bold tracking-widest uppercase">
+                    {combo.discount} OFF
+                  </span>
+                )}
+                {index === 1 && (
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[10px] font-bold tracking-widest uppercase border border-emerald-500/20">
+                    Mais Popular
+                  </span>
+                )}
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Pricing */}
-        <div className="mt-auto">
-          <div className="rounded-xl border border-border p-4 mb-4 bg-surface-elevated">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-text-tertiary">Valor individual:</span>
-              <span className="text-text-tertiary line-through">
-                R$ {combo.originalPrice.toLocaleString('pt-BR')}
-              </span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-text-secondary">Valor no combo:</span>
-              <span className="text-body-black text-2xl gradient-text">
-                R$ {combo.comboPrice.toLocaleString('pt-BR')}
-              </span>
-            </div>
-            <div className="mt-3 pt-3 border-t border-border">
-              <span className="text-sm text-success font-medium">
-                Você economiza R$ {savings.toLocaleString('pt-BR')}
-              </span>
-            </div>
-          </div>
-
-          {/* Ideal For */}
-          {combo.ideal && (
-            <div className="mb-4 p-3 rounded-lg border border-border">
-              <p className="text-xs text-text-secondary">
-                <span className="text-accent font-medium">Indicado para:</span> {combo.ideal}
+              <h3 className="font-display text-3xl text-text-primary mb-2 leading-tight">
+                {combo.title}
+              </h3>
+              <p className="text-accent font-medium text-xs tracking-wide uppercase opacity-80">
+                {combo.campaign}
               </p>
             </div>
-          )}
+          </div>
 
-          {/* CTA Button */}
-          <button
-            onClick={onContact}
-            className="w-full btn-primary group/btn"
-          >
-            Quero Este Combo
-            <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-          </button>
+          <div className="px-8 flex flex-col flex-1">
+            {/* Description */}
+            <p className="text-text-secondary text-sm leading-relaxed mb-8 font-light italic opacity-80">
+              "{combo.description}"
+            </p>
 
-          {/* Limited Time Badge */}
-          <div className="text-center mt-4">
-            <span className="text-xs text-text-tertiary">
-              Oferta por tempo limitado
-            </span>
+            {/* Services List */}
+            <div className="mb-8 flex-1">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <span className="text-xs font-bold text-text-primary tracking-widest uppercase">
+                  O que está incluso
+                </span>
+              </div>
+
+              <div className="space-y-4">
+                {combo.services.map((service, idx) => (
+                  <div key={idx} className="flex items-center justify-between group/item">
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-accent/5 flex items-center justify-center border border-accent/10 group-hover/item:bg-accent group-hover/item:border-accent transition-colors duration-300">
+                        <Check className="w-3 h-3 text-accent group-hover/item:text-white transition-colors" />
+                      </div>
+                      <span className="text-sm text-text-secondary group-hover/item:text-text-primary transition-colors">
+                        {service.name}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-text-tertiary font-medium">
+                      R$ {service.price}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pricing Section */}
+            <div className="mt-auto pb-8">
+              <div className="relative p-6 rounded-[1.5rem] bg-accent/5 border border-accent/10 overflow-hidden mb-6 group-hover:bg-accent/[0.08] transition-colors">
+                {/* Savings Badge Floating */}
+                <div className="absolute -top-2 -right-2 bg-white border border-accent/20 px-3 py-1.5 rounded-xl shadow-sm">
+                  <span className="text-[10px] font-bold text-accent">
+                    ECONOME R$ {savings}
+                  </span>
+                </div>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 text-text-tertiary">
+                    <span className="text-xs">De</span>
+                    <span className="text-sm line-through decoration-accent/30">
+                      R$ {combo.originalPrice.toLocaleString('pt-BR')}
+                    </span>
+                  </div>
+
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-xs font-bold text-text-primary">Por</span>
+                    <span className="text-4xl font-display text-text-primary">
+                      R$ {combo.comboPrice.toLocaleString('pt-BR')}
+                    </span>
+                  </div>
+                </div>
+
+                {combo.ideal && (
+                  <div className="mt-4 pt-4 border-t border-accent/10">
+                    <p className="text-[10px] leading-relaxed text-text-secondary">
+                      <strong className="text-accent uppercase tracking-tighter mr-1">Ideal para:</strong>
+                      {combo.ideal}
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Button */}
+              <button
+                onClick={onContact}
+                className="w-full relative group/btn overflow-hidden h-14 rounded-2xl bg-text-primary text-white font-medium text-sm transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 active:scale-95"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Garantir Oferta
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent to-rose-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+              </button>
+
+              <p className="text-center mt-4 text-[10px] text-text-tertiary uppercase tracking-widest font-medium">
+                Vagas limitadas por semana
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </motion.div>
   );
 };
+
 
 export default ComboCard;

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
+import SalonGallery from '../components/SalonGallery';
 import CourseCard from '../components/CourseCard';
 import ComboCard from '../components/ComboCard';
 import ServicesSection from '../components/ServicesSection';
@@ -10,6 +11,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import EnrollmentForm from '../components/EnrollmentForm';
 import Footer from '../components/Footer';
+import CookieConsent from '../components/CookieConsent';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { testimonials, faqItems, courses as localCourses } from '../types/mockCourses';
 import { supabase } from '@/integrations/supabase/client';
@@ -65,22 +67,16 @@ const Index = () => {
     setIsLoading(false);
   };
 
-  const scrollToEnrollment = (courseId: string) => {
-    const element = document.getElementById('inscricao');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => {
-        const select = document.getElementById('courseId') as HTMLSelectElement;
-        if (select) {
-          select.value = courseId;
-          select.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-      }, 500);
-    }
+  const handleCourseContact = (courseTitle: string) => {
+    const phoneNumber = '5511933300012';
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o curso: ${courseTitle}`);
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
-  const handleComboContact = () => {
-    window.open('https://wa.me/5511933300012?text=Olá! Gostaria de saber mais sobre os combos especiais!', '_blank');
+  const handleComboContact = (comboTitle: string) => {
+    const phoneNumber = '5511933300012';
+    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o combo: ${comboTitle}`);
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   const features = [
@@ -95,6 +91,7 @@ const Index = () => {
       <Header />
       <Hero />
       <AboutSection />
+      <SalonGallery />
       <ServicesSection />
 
       {/* Combos Section */}
@@ -108,8 +105,7 @@ const Index = () => {
           >
             <span className="label-uppercase text-accent mb-4 block">Ofertas Especiais</span>
             <h2 className="heading-xl mb-6">
-              <span className="text-text-primary">Combos</span>
-              <br />
+              <span className="text-text-primary">Combos </span>
               <span className="gradient-text italic">promocionais</span>
             </h2>
             <p className="text-body-light text-text-secondary max-w-xl mx-auto">
@@ -130,7 +126,7 @@ const Index = () => {
                   key={combo.id}
                   combo={combo}
                   index={index}
-                  onContact={handleComboContact}
+                  onContact={() => handleComboContact(combo.title)}
                 />
               ))}
             </div>
@@ -149,8 +145,7 @@ const Index = () => {
           >
             <span className="label-uppercase text-accent mb-4 block">Formação Profissional</span>
             <h2 className="heading-xl mb-6">
-              <span className="text-text-primary">Nossos</span>
-              <br />
+              <span className="text-text-primary">Nossos </span>
               <span className="gradient-text italic">cursos profissionais</span>
             </h2>
             <p className="text-body-light text-text-secondary max-w-xl mx-auto">
@@ -252,7 +247,7 @@ const Index = () => {
                   key={course.id}
                   course={course}
                   index={index}
-                  onEnroll={scrollToEnrollment}
+                  onEnroll={() => handleCourseContact(course.title)}
                 />
               ))}
             </div>
@@ -293,6 +288,7 @@ const Index = () => {
       <FAQ items={faqItems} />
       <EnrollmentForm />
       <Footer />
+      <CookieConsent />
       <WhatsAppButton />
     </div>
   );
