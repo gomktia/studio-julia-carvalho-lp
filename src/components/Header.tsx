@@ -39,12 +39,14 @@ const Header = () => {
     { label: 'Início', id: 'hero' },
     { label: 'Sobre', id: 'sobre' },
     { label: 'Studio', id: 'studio' },
+    { label: 'Resultados', id: 'resultados' },
     { label: 'Serviços', id: 'servicos' },
     { label: 'Combos', id: 'combos' },
     { label: 'Cursos', id: 'cursos' },
     { label: 'Depoimentos', id: 'depoimentos' },
     { label: 'Inscrição', id: 'inscricao' },
     { label: 'FAQ', id: 'faq' },
+    { label: 'Contato', id: 'contato' },
   ];
 
   return (

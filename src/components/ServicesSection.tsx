@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { supabase } from '@/integrations/supabase/client';
 import ServiceCard from './ServiceCard';
+import SkeletonLoader from './SkeletonLoader';
 
 interface Service {
   id: string;
@@ -83,9 +84,7 @@ const ServicesSection = () => {
         </motion.div>
 
         {isLoading ? (
-          <div className="flex justify-center py-12">
-            <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-          </div>
+          <SkeletonLoader count={4} />
         ) : services.length === 0 ? (
           <p className="text-center text-text-tertiary">Nenhum serviço disponível no momento.</p>
         ) : (

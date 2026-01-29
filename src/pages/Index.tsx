@@ -13,6 +13,11 @@ import EnrollmentForm from '../components/EnrollmentForm';
 import Footer from '../components/Footer';
 import CookieConsent from '../components/CookieConsent';
 import WhatsAppButton from '../components/WhatsAppButton';
+import BeforeAfter from '../components/BeforeAfter';
+import LocationSection from '../components/LocationSection';
+import SkeletonLoader from '../components/SkeletonLoader';
+import InstagramFeed from '../components/InstagramFeed';
+import BackToTop from '../components/BackToTop';
 import { testimonials, faqItems, courses as localCourses } from '../types/mockCourses';
 import { supabase } from '@/integrations/supabase/client';
 import { Combo } from '@/types/Combo';
@@ -92,6 +97,7 @@ const Index = () => {
       <Hero />
       <AboutSection />
       <SalonGallery />
+      <BeforeAfter />
       <ServicesSection />
 
       {/* Combos Section */}
@@ -114,9 +120,7 @@ const Index = () => {
           </motion.div>
 
           {isLoading ? (
-            <div className="flex justify-center py-12">
-              <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-            </div>
+            <SkeletonLoader count={3} />
           ) : combos.length === 0 ? (
             <p className="text-center text-text-tertiary">Nenhum combo disponível no momento.</p>
           ) : (
@@ -235,9 +239,7 @@ const Index = () => {
           </motion.div>
 
           {isLoading ? (
-            <div className="flex justify-center py-12">
-              <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-            </div>
+            <SkeletonLoader count={3} />
           ) : courses.length === 0 ? (
             <p className="text-center text-text-tertiary">Nenhum curso disponível no momento.</p>
           ) : (
@@ -286,10 +288,13 @@ const Index = () => {
 
       <Testimonials testimonials={testimonials} />
       <FAQ items={faqItems} />
+      <InstagramFeed />
       <EnrollmentForm />
+      <LocationSection />
       <Footer />
       <CookieConsent />
       <WhatsAppButton />
+      <BackToTop />
     </div>
   );
 };
