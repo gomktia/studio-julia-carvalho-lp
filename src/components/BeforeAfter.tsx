@@ -13,20 +13,20 @@ const items: BeforeAfterItem[] = [
     {
         id: '1',
         title: 'Micropigmentação Labial',
-        before: '/assets/micropigmentacao-labial.jpeg', // Using existing as placeholder
-        after: '/assets/labial.jpg',
+        before: '/assets/micropigmentacao-labial.webp', // Using existing as placeholder
+        after: '/assets/labial.webp',
     },
     {
         id: '2',
         title: 'Limpeza de Pele',
-        before: '/assets/limpeza-pele.jpg',
-        after: '/assets/limpeza-pele-nova.jpg',
+        before: '/assets/limpeza-pele.webp',
+        after: '/assets/limpeza-pele-nova.webp',
     },
     {
         id: '3',
         title: 'Design de Sobrancelha',
-        before: '/assets/design-sobrancelha.jpeg',
-        after: '/assets/foto-capa-brow.jpeg',
+        before: '/assets/design-sobrancelha.webp',
+        after: '/assets/foto-capa-brow.webp',
     }
 ];
 

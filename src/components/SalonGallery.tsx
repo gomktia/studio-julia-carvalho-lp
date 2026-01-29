@@ -10,22 +10,22 @@ import {
 } from "@/components/ui/carousel";
 
 const salonImages = [
-    '/assets/salao/salao-01.jpeg',
-    '/assets/salao/salao-02.jpeg',
-    '/assets/salao/salao-03.jpeg',
-    '/assets/salao/salao-04.jpeg',
-    '/assets/salao/salao-05.jpeg',
-    '/assets/salao/salao-06.jpeg',
-    '/assets/salao/salao-07.jpeg',
-    '/assets/salao/salao-08.jpeg',
-    '/assets/salao/salao-09.jpeg',
-    '/assets/salao/salao-10.jpeg',
-    '/assets/salao/salao-11.jpeg',
-    '/assets/salao/salao-12.jpeg',
-    '/assets/salao/salao-13.jpeg',
-    '/assets/salao/salao-14.jpeg',
-    '/assets/salao/salao-15.jpeg',
-    '/assets/salao/salao-17.jpeg',
+    '/assets/salao/salao-01.webp',
+    '/assets/salao/salao-02.webp',
+    '/assets/salao/salao-03.webp',
+    '/assets/salao/salao-04.webp',
+    '/assets/salao/salao-05.webp',
+    '/assets/salao/salao-06.webp',
+    '/assets/salao/salao-07.webp',
+    '/assets/salao/salao-08.webp',
+    '/assets/salao/salao-09.webp',
+    '/assets/salao/salao-10.webp',
+    '/assets/salao/salao-11.webp',
+    '/assets/salao/salao-12.webp',
+    '/assets/salao/salao-13.webp',
+    '/assets/salao/salao-14.webp',
+    '/assets/salao/salao-15.webp',
+    '/assets/salao/salao-17.webp',
 ];
 
 const SalonGallery = () => {

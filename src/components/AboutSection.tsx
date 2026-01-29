@@ -25,7 +25,7 @@ const AboutSection = () => {
               {/* Main Image */}
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl overflow-hidden">
                 <img
-                  src="/assets/ju-carvalho.jpg"
+                  src="/assets/ju-carvalho.webp"
                   alt="Júlia Carvalho - Instrutora Estudio Júlia Carvalho"
                   className="w-full h-full object-cover"
                   loading="lazy"

@@ -101,7 +101,7 @@ const LocationSection = () => {
                             {/* This would be a Google Map Embed in a real scenario */}
                             {/* For now, let's use a stylized image of the studio or a generic map visual */}
                             <img
-                                src="/assets/salao/salao-01.jpeg"
+                                src="/assets/salao/salao-01.webp"
                                 alt="Studio Interior"
                                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
                             />

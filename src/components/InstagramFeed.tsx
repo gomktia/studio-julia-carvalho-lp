@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { Instagram, Heart, MessageCircle } from 'lucide-react';
 
 const feedImages = [
-    { id: 1, src: '/assets/micropigmentacao-shadow.jpeg', likes: '124', comments: '12' },
-    { id: 2, src: '/assets/brow-lamination.jpeg', likes: '89', comments: '5' },
-    { id: 3, src: '/assets/limpeza-pele-profunda.jpeg', likes: '210', comments: '18' },
-    { id: 4, src: '/assets/micropigmentacao-labial.jpeg', likes: '156', comments: '14' },
-    { id: 5, src: '/assets/lash-lifting.jpeg', likes: '92', comments: '7' },
-    { id: 6, src: '/assets/microagulhamento.jpeg', likes: '178', comments: '21' },
+    { id: 1, src: '/assets/micropigmentacao-shadow.webp', likes: '124', comments: '12' },
+    { id: 2, src: '/assets/brow-lamination.webp', likes: '89', comments: '5' },
+    { id: 3, src: '/assets/limpeza-pele-profunda.webp', likes: '210', comments: '18' },
+    { id: 4, src: '/assets/micropigmentacao-labial.webp', likes: '156', comments: '14' },
+    { id: 5, src: '/assets/lash-lifting.webp', likes: '92', comments: '7' },
+    { id: 6, src: '/assets/microagulhamento.webp', likes: '178', comments: '21' },
 ];
 
 const InstagramFeed = () => {

@@ -16,15 +16,15 @@ interface Service {
 
 const getServiceImage = (name: string) => {
   const normalized = name.toLowerCase();
-  if (normalized.includes('limpeza de pele')) return '/assets/limpeza-pele-profunda.jpeg';
-  if (normalized.includes('microagulhamento')) return '/assets/microagulhamento.jpeg';
-  if (normalized.includes('design de sobrancelha')) return '/assets/design-sobrancelha.jpeg';
-  if (normalized.includes('brow lamination')) return '/assets/brow-lamination.jpeg';
-  if (normalized.includes('lash lifting')) return '/assets/lash-lifting.jpeg';
-  if (normalized.includes('labial')) return '/assets/micropigmentacao-labial.jpeg';
-  if (normalized.includes('fio a fio')) return '/assets/micropigmentacao-fio-a-fio.jpeg';
-  if (normalized.includes('shadow')) return '/assets/micropigmentacao-shadow.jpeg';
-  if (normalized.includes('cílios') || normalized.includes('cilios')) return '/assets/cilios.jpeg';
+  if (normalized.includes('limpeza de pele')) return '/assets/limpeza-pele-profunda.webp';
+  if (normalized.includes('microagulhamento')) return '/assets/microagulhamento.webp';
+  if (normalized.includes('design de sobrancelha')) return '/assets/design-sobrancelha.webp';
+  if (normalized.includes('brow lamination')) return '/assets/brow-lamination.webp';
+  if (normalized.includes('lash lifting')) return '/assets/lash-lifting.webp';
+  if (normalized.includes('labial')) return '/assets/micropigmentacao-labial.webp';
+  if (normalized.includes('fio a fio')) return '/assets/micropigmentacao-fio-a-fio.webp';
+  if (normalized.includes('shadow')) return '/assets/micropigmentacao-shadow.webp';
+  if (normalized.includes('cílios') || normalized.includes('cilios')) return '/assets/cilios.webp';
   return '/assets/placeholder.svg';
 };
 

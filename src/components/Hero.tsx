@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Background Image Optimized for LCP */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="/hero-julia.jpg"
+          src="/hero-julia.webp"
           alt="Júlia Carvalho"
           className="w-full h-full object-cover object-[center_top] animate-hero-zoom"
           fetchPriority="high"

@@ -8,7 +8,7 @@ export const courses: Course[] = [
     price: 750,
     duration: '1 dia intensivo',
     category: 'Estética Facial',
-    image: '/assets/limpeza-pele-profunda.jpeg',
+    image: '/assets/limpeza-pele-profunda.webp',
     features: [
       'Protocolo limpeza profunda',
       'Remoção de milium',
@@ -25,7 +25,7 @@ export const courses: Course[] = [
     price: 880,
     duration: '1 dia intensivo',
     category: 'Estética Avançada',
-    image: '/assets/microagulhamento.jpeg',
+    image: '/assets/microagulhamento.webp',
     features: [
       'Facial, Capilar e Corporal',
       'Indicações e contraindicações',
@@ -42,7 +42,7 @@ export const courses: Course[] = [
     price: 320,
     duration: '1 dia',
     category: 'Sobrancelhas',
-    image: '/assets/design-sobrancelha.jpeg', // Using generic brow image if specific not available
+    image: '/assets/design-sobrancelha.webp', // Using generic brow image if specific not available
     features: [
       'Visagismo e medidas',
       'Design com pinça e linha',
@@ -59,7 +59,7 @@ export const courses: Course[] = [
     price: 290,
     duration: '1 dia',
     category: 'Sobrancelhas',
-    image: '/assets/foto-capa-brow.jpeg',
+    image: '/assets/foto-capa-brow.webp',
     features: [
       'Técnica de alinhamento',
       'Nutrição dos fios',
@@ -76,7 +76,7 @@ export const courses: Course[] = [
     price: 650,
     duration: '1 dia',
     category: 'Cílios',
-    image: '/assets/lash-lifting.jpeg', // Placeholder name, assuming exists or fallback
+    image: '/assets/lash-lifting.webp', // Placeholder name, assuming exists or fallback
     features: [
       'Curvatura e coloração',
       'Lash Botox (nutrição)',
@@ -93,7 +93,7 @@ export const courses: Course[] = [
     price: 980,
     duration: '2 dias',
     category: 'Micropigmentação',
-    image: '/assets/micropigmentacao-labial.jpeg',
+    image: '/assets/micropigmentacao-labial.webp',
     features: [
       'Neutralização e Revitalização',
       'Efeito Batom e Aquarela',
@@ -110,7 +110,7 @@ export const courses: Course[] = [
     price: 950,
     duration: '2 dias',
     category: 'Micropigmentação',
-    image: '/assets/micropigmentacao-fio-a-fio.jpeg',
+    image: '/assets/micropigmentacao-fio-a-fio.webp',
     features: [
       'Trama de fios realista',
       'Profundidade e pressão',
@@ -127,7 +127,7 @@ export const courses: Course[] = [
     price: 970,
     duration: '2 dias',
     category: 'Micropigmentação',
-    image: '/assets/micropigmentacao-shadow.jpeg',
+    image: '/assets/micropigmentacao-shadow.webp',
     features: [
       'Efeito pixel e compacta',
       'Degradê perfeito',
@@ -144,7 +144,7 @@ export const courses: Course[] = [
     price: 790,
     duration: '1 dia',
     category: 'Cílios',
-    image: '/assets/cilios.jpeg', // Placeholder
+    image: '/assets/cilios.webp', // Placeholder
     features: [
       'Fio a fio clássico',
       'Isolamento perfeito',
@@ -163,7 +163,7 @@ export const testimonials: Testimonial[] = [
     role: 'Designer de Sobrancelhas',
     content: 'O curso de Micropigmentação Fio a Fio mudou completamente minha carreira! A Ju é uma profissional incrível, ensina com amor e dedicação. Hoje atendo várias clientes por semana com total segurança.',
     rating: 5,
-    image: '/assets/testimonial-1.jpg'
+    image: '/assets/testimonial-1.webp'
   },
   {
     id: '2',
@@ -171,7 +171,7 @@ export const testimonials: Testimonial[] = [
     role: 'Esteticista',
     content: 'Fiz o curso de Limpeza de Pele Profunda e saí preparada para atender no mesmo dia! A metodologia é excepcional, com muita prática e material de apoio completo. Super recomendo!',
     rating: 5,
-    image: '/assets/testimonial-2.jpg'
+    image: '/assets/testimonial-2.webp'
   },
   {
     id: '3',
@@ -179,7 +179,7 @@ export const testimonials: Testimonial[] = [
     role: 'Micropigmentadora',
     content: 'Já tinha experiência na área, mas o curso de Shadow 3D da Studio Ju Carvalho elevou meu trabalho a outro nível. As técnicas são avançadas e os resultados impressionam minhas clientes!',
     rating: 5,
-    image: '/assets/testimonial-3.jpg'
+    image: '/assets/testimonial-3.webp'
   }
 ];
 

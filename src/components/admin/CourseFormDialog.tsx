@@ -188,7 +188,7 @@ const CourseFormDialog = ({ open, onOpenChange, course, onSave }: CourseFormDial
                 id="image"
                 value={formData.image}
                 onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                placeholder="/assets/curso.jpg"
+                placeholder="/assets/curso.webp"
               />
             </div>
           </div>
