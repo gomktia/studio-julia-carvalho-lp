@@ -28,6 +28,7 @@ const AboutSection = () => {
                   src="/assets/ju-carvalho.jpg"
                   alt="Júlia Carvalho - Instrutora Estudio Júlia Carvalho"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>

@@ -38,6 +38,7 @@ const ServiceCard = ({ service, index, onSchedule }: ServiceCardProps) => {
               src={service.image || '/assets/placeholder.svg'}
               alt={service.name}
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
 

@@ -78,6 +78,7 @@ const BeforeAfter = () => {
                                 src={items[activeItem].after}
                                 alt="After"
                                 className="absolute inset-0 w-full h-full object-cover"
+                                loading="lazy"
                             />
 
                             {/* Before Image (Clipped) */}
@@ -89,6 +90,7 @@ const BeforeAfter = () => {
                                     src={items[activeItem].before}
                                     alt="Before"
                                     className="absolute inset-0 w-[100%] h-full object-cover grayscale-[0.5]"
+                                    loading="lazy"
                                 />
                             </div>
 
@@ -123,8 +125,8 @@ const BeforeAfter = () => {
                                     setSliderPosition(50);
                                 }}
                                 className={`p-6 rounded-2xl border text-left transition-all duration-300 ${activeItem === index
-                                        ? 'bg-white border-accent shadow-xl shadow-accent/5'
-                                        : 'bg-transparent border-border hover:border-accent/30'
+                                    ? 'bg-white border-accent shadow-xl shadow-accent/5'
+                                    : 'bg-transparent border-border hover:border-accent/30'
                                     }`}
                             >
                                 <h4 className={`font-display text-xl mb-1 ${activeItem === index ? 'text-accent' : 'text-text-primary'}`}>

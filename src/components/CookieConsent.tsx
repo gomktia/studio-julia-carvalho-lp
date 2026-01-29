@@ -69,8 +69,8 @@ const CookieConsent = () => {
                     >
                         <div className="bg-white/80 backdrop-blur-xl border border-border/50 p-6 rounded-[2rem] shadow-2xl shadow-black/10">
                             <div className="flex items-start gap-4">
-                                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0">
-                                    <Shield className="w-6 h-6 text-accent" />
+                                <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-border/20 shadow-sm">
+                                    <img src="/original-logo.jpeg" alt="Logo" className="w-full h-full object-cover" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-display text-xl text-text-primary mb-2 italic">Sua privacidade importa</h3>
