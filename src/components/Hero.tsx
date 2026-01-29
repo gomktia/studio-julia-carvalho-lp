@@ -12,23 +12,21 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-900">
       {/* Background Image with Parallax-like feel via absolute positioning */}
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url("/hero-julia.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-        }}
-      >
-        {/* Dark Overlay for contrast - increased opacity for better text readability over portrait */}
+      {/* Background Image Optimized for LCP */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src="/hero-julia.jpg"
+          alt="Júlia Carvalho"
+          className="w-full h-full object-cover object-[center_top] animate-hero-zoom"
+          fetchPriority="high"
+          decoding="async"
+        />
+        {/* Dark Overlay for contrast */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 
         {/* Gradient Overlay for bottom fade */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/50" />
-      </motion.div>
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-32 sm:py-40 flex flex-col items-center text-center">
         <div className="max-w-5xl">
