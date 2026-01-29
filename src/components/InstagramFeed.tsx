@@ -19,10 +19,10 @@ const InstagramFeed = () => {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="max-w-xl"
+                        className="max-w-2xl"
                     >
                         <span className="label-uppercase text-accent mb-4 block">Social Proof</span>
-                        <h2 className="heading-xl mb-6">
+                        <h2 className="heading-xl mb-6 whitespace-nowrap">
                             <span className="text-text-primary">Acompanhe nosso </span>
                             <span className="gradient-text italic">Instagram</span>
                         </h2>
