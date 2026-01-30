@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg flex items-center justify-center transition-colors"
+      className="fixed bottom-6 right-8 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-lg flex items-center justify-center transition-colors"
       aria-label="Fale conosco no WhatsApp"
     >
       <MessageCircle className="w-6 h-6 text-white" />

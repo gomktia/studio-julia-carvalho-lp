@@ -35,7 +35,7 @@ const BackToTop = () => {
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-[100] w-12 h-12 rounded-full bg-text-primary text-white shadow-2xl flex items-center justify-center border border-white/10 backdrop-blur-md hover:bg-black transition-colors group"
+                    className="fixed bottom-24 right-9 z-[100] w-12 h-12 rounded-full bg-text-primary text-white shadow-2xl flex items-center justify-center border border-white/10 backdrop-blur-md hover:bg-black transition-colors group"
                     aria-label="Voltar ao topo"
                 >
                     <ChevronUp className="w-6 h-6 transition-transform group-hover:-translate-y-1" />
