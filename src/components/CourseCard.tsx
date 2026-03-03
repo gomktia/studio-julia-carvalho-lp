@@ -88,16 +88,18 @@ const CourseCard = ({ course, index, onEnroll }: CourseCardProps) => {
             </div>
 
             {/* CTA */}
-            <button
-              onClick={() => onEnroll(course.id)}
-              className="w-full relative group/btn overflow-hidden h-14 rounded-2xl bg-text-primary text-white font-medium text-sm transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 active:scale-95"
+            <a
+              href="https://alunos.studiojuliacarvalho.com.br/checkout/xnXkgb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full relative group/btn overflow-hidden h-14 rounded-2xl bg-text-primary text-white font-medium text-sm transition-all duration-300 hover:shadow-xl hover:shadow-accent/20 active:scale-95 block"
             >
-              <span className="relative z-10 flex items-center justify-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2 h-full">
                 Começar agora
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent to-rose-500 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-            </button>
+            </a>
 
             <p className="text-center mt-4 text-[10px] text-text-tertiary uppercase tracking-widest font-medium">
               Certificado Incluso
