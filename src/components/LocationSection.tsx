@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { MapPin, Clock, Phone, Navigation, Instagram } from 'lucide-react';
 
 const LocationSection = () => {
-    const address = "Tatuapé, São Paulo - SP";
+    const address = "Rua Francisco Marengo 189 sala 72, 7 andar";
     const reference = "A 1 minuto do Metrô Carrão";
-    const whatsapp = "11 93330-0012";
+    const whatsapp = "(11)910109657";
 
     return (
         <section id="contato" className="py-24 bg-white overflow-hidden relative">
@@ -76,7 +76,7 @@ const LocationSection = () => {
 
                         <div className="mt-12 flex flex-wrap gap-4">
                             <button
-                                onClick={() => window.open('https://wa.me/5511933300012', '_blank')}
+                                onClick={() => window.open('https://wa.me/5511910109657', '_blank')}
                                 className="btn-primary"
                             >
                                 Agende agora pelo WhatsApp

@@ -79,13 +79,13 @@ const Index = () => {
       window.open(course.checkoutUrl, '_blank');
       return;
     }
-    const phoneNumber = '5511933300012';
+    const phoneNumber = '5511910109657';
     const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o curso: ${course.title}`);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   const handleComboContact = (comboTitle: string) => {
-    const phoneNumber = '5511933300012';
+    const phoneNumber = '5511910109657';
     const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre o combo: ${comboTitle}`);
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -158,7 +158,7 @@ const Index = () => {
               <span className="label-uppercase text-accent mb-4 block">Formação Profissional</span>
               <h2 className="heading-xl mb-6">
                 <span className="text-text-primary">Nossos </span>
-                <span className="gradient-text italic">cursos profissionais</span>
+                <span className="gradient-text italic">Cursos Profissinalizantes</span>
               </h2>
               <p className="text-body-light text-text-secondary max-w-xl mx-auto">
                 Formação completa com certificação, material didático, kit personalizado e prática supervisionada

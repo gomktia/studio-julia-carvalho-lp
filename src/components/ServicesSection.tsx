@@ -61,7 +61,7 @@ const ServicesSection = () => {
 
   const handleSchedule = (serviceName: string) => {
     const message = encodeURIComponent(`Olá! Gostaria de agendar o serviço: ${serviceName}`);
-    window.open(`https://wa.me/5511933300012?text=${message}`, '_blank');
+    window.open(`https://wa.me/5511910109657?text=${message}`, '_blank');
   };
 
   return (

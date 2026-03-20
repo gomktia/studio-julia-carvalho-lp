@@ -87,7 +87,7 @@ const Header = () => {
           >
             <div className="flex flex-col">
               <span className={`font-display text-xl sm:text-2xl tracking-tight transition-colors duration-300 ${isScrolled ? 'text-text-primary' : 'text-white'}`}>
-                Estudio <span className="gradient-text italic">Júlia Carvalho</span>
+                Studio <span className="gradient-text italic">Júlia Carvalho</span>
               </span>
               <span className={`label-uppercase text-[10px] transition-colors duration-300 hidden sm:block ${isScrolled ? 'text-text-tertiary' : 'text-white/80'}`}>
                 Estética avançada profissional Dr Júlia carvalho.

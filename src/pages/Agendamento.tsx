@@ -268,7 +268,7 @@ const Agendamento = () => {
               <button onClick={() => window.location.href = '/'} className="btn-primary px-10 h-14 rounded-2xl">
                 Voltar ao Início
               </button>
-              <a href="https://wa.me/5511933300012" target="_blank" className="btn-secondary px-8 h-14 rounded-2xl">
+              <a href="https://wa.me/5511910109657" target="_blank" className="btn-secondary px-8 h-14 rounded-2xl">
                 Dúvidas no WhatsApp
               </a>
             </div>
@@ -588,7 +588,7 @@ const Agendamento = () => {
 
               <div className="p-6 rounded-[2rem] bg-surface-elevated border border-border shadow-sm text-center">
                 <p className="text-xs text-text-secondary leading-relaxed mb-1">Dúvidas com o agendamento?</p>
-                <a href="https://wa.me/5511933300012" className="text-xs font-bold text-accent hover:underline">Fale conosco pelo WhatsApp</a>
+                <a href="https://wa.me/5511910109657" className="text-xs font-bold text-accent hover:underline">Fale conosco pelo WhatsApp</a>
               </div>
             </div>
 

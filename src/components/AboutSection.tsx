@@ -26,7 +26,7 @@ const AboutSection = () => {
               <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl overflow-hidden">
                 <img
                   src="/assets/ju-carvalho.webp"
-                  alt="Júlia Carvalho - Instrutora Estudio Júlia Carvalho"
+                  alt="Júlia Carvalho - Nossa profissional Studio Júlia Carvalho"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -58,7 +58,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="label-uppercase text-accent mb-4 block">Sobre a Instrutora</span>
+            <span className="label-uppercase text-accent mb-4 block">Sobre a nossa profissional</span>
 
             <h2 className="heading-xl mb-6">
               <span className="gradient-text italic">Júlia Carvalho</span>
@@ -72,7 +72,7 @@ const AboutSection = () => {
               </p>
 
               <p className="text-body-light text-text-secondary leading-relaxed">
-                No Estudio Júlia Carvalho, a missão é formar profissionais técnicas e confiantes, preparadas
+                No Studio Júlia Carvalho, a missão é formar profissionais técnicas e confiantes, preparadas
                 para entregar resultados excepcionais e construir carreiras de sucesso no mercado de beleza.
               </p>
             </div>

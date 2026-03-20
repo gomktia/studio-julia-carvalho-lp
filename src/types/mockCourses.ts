@@ -145,24 +145,6 @@ export const courses: Course[] = [
     ],
     checkoutUrl: 'https://alunos.studiojuliacarvalho.com.br/checkout/x4Jg2b'
   },
-  {
-    id: 'cilios',
-    title: 'Extensão de Cílios',
-    description: 'Aprenda as técnicas clássicas e volumes para transformar o olhar das suas clientes com segurança.',
-    price: 790,
-    duration: '1 dia',
-    category: 'Cílios',
-    image: '/assets/cilios.webp', // Placeholder
-    features: [
-      'Fio a fio clássico',
-      'Isolamento perfeito',
-      'Mapping e Visagismo',
-      'Kit personalizado + Apostila Física',
-      'Certificado + Coffee Break/Champanhe',
-      'Suporte pós-curso ilimitado com a Ju'
-    ],
-    checkoutUrl: 'https://alunos.studiojuliacarvalho.com.br/checkout/b1ayyb'
-  },
 ];
 
 export const testimonials: Testimonial[] = [

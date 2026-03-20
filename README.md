@@ -1,6 +1,6 @@
-# Estudio Júlia Carvalho - Landing Page
+# Studio Júlia Carvalho - Landing Page
 
-Landing page desenvolvida para o Estudio Júlia Carvalho, focada em cursos de estética e automaquiagem.
+Landing page desenvolvida para o Studio Júlia Carvalho, focada em cursos de estética e automaquiagem.
 
 ## Tecnologias Utilizadas
 

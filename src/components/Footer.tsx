@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="md:col-span-5 space-y-8">
             <div className="flex flex-col">
               <span className="font-display text-4xl tracking-tight mb-2">
-                Estudio <span className="text-rose-300 italic">Júlia Carvalho</span>
+                Studio <span className="text-rose-300 italic">Júlia Carvalho</span>
               </span>
               <div className="h-0.5 w-12 bg-rose-300/30" />
             </div>
@@ -78,13 +78,13 @@ const Footer = () => {
             <h4 className="text-[10px] font-bold text-rose-200 uppercase tracking-[0.3em] mb-10">Atendimento</h4>
             <ul className="space-y-6">
               <li>
-                <a href="tel:+5511933300012" className="flex items-center gap-5 group">
+                <a href="tel:+5511910109657" className="flex items-center gap-5 group">
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-rose-300/30 transition-colors">
                     <Phone className="w-5 h-5 text-rose-200" />
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[10px] text-white/40 uppercase font-bold tracking-widest">WhatsApp Business</span>
-                    <span className="text-sm font-medium tracking-wide">11 93330-0012</span>
+                    <span className="text-sm font-medium tracking-wide">(11)910109657</span>
                   </div>
                 </a>
               </li>
@@ -107,7 +107,7 @@ const Footer = () => {
         <div className="mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-2">
             <p className="text-[10px] font-medium text-white/30 uppercase tracking-[0.2em]">
-              © {currentYear} Estudio Júlia Carvalho • Todos os direitos reservados
+              © {currentYear} Studio Júlia Carvalho • Todos os direitos reservados
             </p>
             <div className="flex gap-4">
               <button onClick={() => window.dispatchEvent(new CustomEvent('open-policy', { detail: 'privacy' }))} className="text-[9px] font-bold text-white/20 uppercase tracking-[0.1em] hover:text-rose-300 transition-colors">Política de Privacidade</button>

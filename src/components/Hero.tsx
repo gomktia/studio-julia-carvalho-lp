@@ -40,9 +40,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="heading-display mb-8 text-4xl sm:text-6xl lg:text-7xl leading-tight"
           >
-            <span className="text-white drop-shadow-sm">Transforme sua </span>
-            <span className="text-rose-300 italic drop-shadow-sm">paixão</span>
-            <span className="text-white drop-shadow-sm"> em profissão</span>
+            <span className="text-white drop-shadow-sm">Cursos </span>
+            <span className="text-rose-300 italic drop-shadow-sm">PROFISSIONALIZANTES NA ÁREA DA ESTÉTICA E DA BELEZA.</span>
           </motion.h1>
 
           {/* Subtitle */}

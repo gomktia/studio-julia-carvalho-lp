@@ -33,7 +33,7 @@ const CookieConsent = () => {
         privacy: {
             title: 'Política de Privacidade',
             content: `
-        O Estúdio Júlia Carvalho valoriza a sua privacidade. Esta política descreve como coletamos e usamos seus dados.
+        O Studio Júlia Carvalho valoriza a sua privacidade. Esta política descreve como coletamos e usamos seus dados.
         
         1. Coleta de Dados: Coletamos informações fornecidas voluntariamente em nossos formulários de inscrição e contato (nome, e-mail, telefone).
         2. Finalidade: Seus dados são usados exclusivamente para processar suas solicitações de cursos, serviços e enviar comunicações relacionadas ao studio.
@@ -42,10 +42,10 @@ const CookieConsent = () => {
         5. Seus Direitos: De acordo com a LGPD, você pode solicitar o acesso, correção ou exclusão de seus dados a qualquer momento via e-mail.
       `
         },
-        terms: {
+            terms: {
             title: 'Termos de Uso',
             content: `
-        Ao acessar o site do Estúdio Júlia Carvalho, você concorda em cumprir estes termos de serviço.
+        Ao acessar o site do Studio Júlia Carvalho, você concorda em cumprir estes termos de serviço.
         
         1. Uso de Conteúdo: Todo material didático, fotos e vídeos são de propriedade intelectual exclusiva do Studio Júlia Carvalho.
         2. Inscrições: O preenchimento do formulário de inscrição não garante vaga imediata; nossa equipe entrará em contato para confirmação.
@@ -174,7 +174,7 @@ const CookieConsent = () => {
 
                             <div className="p-8 md:p-12 border-t border-border/50 bg-base/50">
                                 <p className="text-[10px] text-text-tertiary uppercase tracking-widest font-medium mb-1 text-center">
-                                    Estúdio Júlia Carvalho • CNPJ 12.345.678/0001-90
+                                    Studio Júlia Carvalho • CNPJ 12.345.678/0001-90
                                 </p>
                                 <p className="text-[10px] text-text-tertiary opacity-60 text-center">
                                     Última atualização: Janeiro de 2026
