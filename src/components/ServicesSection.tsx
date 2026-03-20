@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import { supabase } from '@/integrations/supabase/client';
 import ServiceCard from './ServiceCard';
 import SkeletonLoader from './SkeletonLoader';
+import botoxGlabelaImg from '../../Botox Glabela.jpeg';
+import botoxFullFaceImg from '../../botox full face 1.jpeg';
+import reconstruMicropigmentacaoImg from '../../Reconstrução de Micropigmentação.jpeg';
+import microbladingImg from '../../Microblading.jpeg';
 
 interface Service {
   id: string;
@@ -16,14 +20,22 @@ interface Service {
 
 const getServiceImage = (name: string) => {
   const normalized = name.toLowerCase();
+  if (normalized.includes('botox') && (normalized.includes('glabel') || normalized.includes('glabela'))) return botoxGlabelaImg;
+  if (normalized.includes('botox') && normalized.includes('full')) return botoxFullFaceImg;
+  if (normalized.includes('microblading')) return microbladingImg;
+  // Combo/reconstrução frequentemente aparece nos nomes como "reconstrução"
+  if (normalized.includes('reconstru')) return reconstruMicropigmentacaoImg;
+
   if (normalized.includes('limpeza de pele')) return '/assets/limpeza-pele-profunda.webp';
   if (normalized.includes('microagulhamento')) return '/assets/microagulhamento.webp';
   if (normalized.includes('design de sobrancelha')) return '/assets/design-sobrancelha.webp';
   if (normalized.includes('brow lamination')) return '/assets/brow-lamination.webp';
   if (normalized.includes('lash lifting')) return '/assets/lash-lifting.webp';
-  if (normalized.includes('labial')) return '/assets/micropigmentacao-labial.webp';
-  if (normalized.includes('fio a fio')) return '/assets/micropigmentacao-fio-a-fio.webp';
-  if (normalized.includes('shadow')) return '/assets/micropigmentacao-shadow.webp';
+  // Quando o serviço usa termos como "labial", "shadow" e "fio a fio", reaproveitamos
+  // as imagens que você deixou para garantir a capa correta para essas variações.
+  if (normalized.includes('labial')) return microbladingImg;
+  if (normalized.includes('fio a fio') || normalized.includes('fio a fio')) return reconstruMicropigmentacaoImg;
+  if (normalized.includes('shadow')) return reconstruMicropigmentacaoImg;
   if (normalized.includes('cílios') || normalized.includes('cilios')) return '/assets/cilios.webp';
   return '/assets/placeholder.svg';
 };
