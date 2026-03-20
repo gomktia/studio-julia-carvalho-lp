@@ -7,6 +7,7 @@ import botoxGlabelaImg from '../../Botox Glabela.jpeg';
 import botoxFullFaceImg from '../../botox full face 1.jpeg';
 import reconstruMicropigmentacaoImg from '../../Reconstrução de Micropigmentação.jpeg';
 import microbladingImg from '../../Microblading.jpeg';
+import designHennaImg from '../../design com hena.jpeg';
 
 interface Service {
   id: string;
@@ -28,7 +29,9 @@ const getServiceImage = (name: string) => {
 
   if (normalized.includes('limpeza de pele')) return '/assets/limpeza-pele-profunda.webp';
   if (normalized.includes('microagulhamento')) return '/assets/microagulhamento.webp';
-  if (normalized.includes('design de sobrancelha')) return '/assets/design-sobrancelha.webp';
+  // Design de sobrancelha com henna/coloracao
+  if (normalized.includes('design de sobrancelha')) return designHennaImg;
+  if (normalized.includes('henna') || normalized.includes('colora')) return designHennaImg;
   if (normalized.includes('brow lamination')) return '/assets/brow-lamination.webp';
   if (normalized.includes('lash lifting')) return '/assets/lash-lifting.webp';
   if (normalized.includes('labial')) return '/assets/micropigmentacao-labial.webp';
