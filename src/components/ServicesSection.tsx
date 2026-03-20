@@ -23,7 +23,7 @@ const getServiceImage = (name: string) => {
   if (normalized.includes('botox') && (normalized.includes('glabel') || normalized.includes('glabela'))) return botoxGlabelaImg;
   if (normalized.includes('botox') && normalized.includes('full')) return botoxFullFaceImg;
   if (normalized.includes('microblading')) return microbladingImg;
-  // Combo/reconstrução frequentemente aparece nos nomes como "reconstrução"
+  // Apenas quando o serviço for explicitamente de reconstrução (ex.: "Micropigmentação reconstrutora")
   if (normalized.includes('reconstru')) return reconstruMicropigmentacaoImg;
 
   if (normalized.includes('limpeza de pele')) return '/assets/limpeza-pele-profunda.webp';
@@ -31,11 +31,9 @@ const getServiceImage = (name: string) => {
   if (normalized.includes('design de sobrancelha')) return '/assets/design-sobrancelha.webp';
   if (normalized.includes('brow lamination')) return '/assets/brow-lamination.webp';
   if (normalized.includes('lash lifting')) return '/assets/lash-lifting.webp';
-  // Quando o serviço usa termos como "labial", "shadow" e "fio a fio", reaproveitamos
-  // as imagens que você deixou para garantir a capa correta para essas variações.
-  if (normalized.includes('labial')) return microbladingImg;
-  if (normalized.includes('fio a fio') || normalized.includes('fio a fio')) return reconstruMicropigmentacaoImg;
-  if (normalized.includes('shadow')) return reconstruMicropigmentacaoImg;
+  if (normalized.includes('labial')) return '/assets/micropigmentacao-labial.webp';
+  if (normalized.includes('fio a fio')) return '/assets/micropigmentacao-fio-a-fio.webp';
+  if (normalized.includes('shadow')) return '/assets/micropigmentacao-shadow.webp';
   if (normalized.includes('cílios') || normalized.includes('cilios')) return '/assets/cilios.webp';
   return '/assets/placeholder.svg';
 };
